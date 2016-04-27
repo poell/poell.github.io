@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+   
+    <title>
+        Titel på sidan
+    </title>
+    <head>
+    <meta charset="utf-8">
+    </head>
+    <link rel="stylesheet" href=css/bootstrap.min.css>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="jquery/jquery-2.2.3.min.js"></script>
+    <script src="angular/angular.min.js"></script>
+    <script src=script.js></script>
+
+    <link rel="stylesheet" href="main.css">
+    
+<body ng-app="bookModule">
+
+<div class="container">
+<div class="jumbotron">
+    <p>Stor text kan man skriva faktiskt</p>
+</div>
+      </div>        
+       <div class="img">
+        <img src="david-bowie-4.jpg" class="img-rounded img-responsive" width=300 height=200 >
+                    
+</div>  
+      <div ng-controller="bookController">
+               <p><input type"text" placeholder="Sök bok i systemet" ng-model="searchBook"></input></p>
+      </div>      
+<table>
+    <thead>
+        <tr>
+            <th>Author</th>
+            <th>Title</th>
+            <th>Published</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+<tbody>
+    <tr ng-repeat="book in books" | filter:bookSearch>
+        <td> {{ book.title }} </td>
+        <td> {{ book.author }} </td>
+        <td> {{ book.published }}</td>
+        <td> {{ book.genre }} </td>
+    </tr>
+</tbody>
+</table>
+                </body>
+</html>
