@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html data-ng-app="stockFinder" lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="collectibles, toy store, comic shop, coast city, cameras, movies, limited editions">
-  <meta name="description" content="The Official website of Coast City Collectibles. Find our contact info, see our stock and what items are hot right now">
-  <meta name="robots" content="noindex, nofollow">
-  <!-- For some reason GetForge adds some non-compliant w3c meta tags :< -->
-  <title>Coast City Collectibles - Official Website</title>
+  <meta name="keywords" content="stock, collectibles, toy store, comic shop, coast city, inventory">
+  <meta name="description" content="The current inventory of Coast City Collectibles. Even more items are in stock in store!">
+  
+  <title>Our current inventory</title>
   <link href=
   "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel=
   "stylesheet">
-  <script src="jquery-2.2.3.min.js">
-  </script>
-  <script src=
-  "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
-  </script>
   <link href=
   "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"
   rel="stylesheet">
   <link href="poell.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-  <!-- I find it funny that the google web design guidelines tell you not to use type but they use it themselves w/ google fonts-->
+  <script src="jquery-2.2.3.min.js">
+  </script>
+  <script src=
+  "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+  </script>
+  <script src=
+  "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+  </script>
 </head>
 
 <body>
@@ -30,7 +32,6 @@
       <div class="navbar-header">
         <button class="navbar-toggle" data-target="#myNavbar" data-toggle=
         "collapse" type="button" value="toggle_menu">Menu<span class="fa fa-eject"></span></button>
-        <!-- I don't really dig the usage of max-width here but I really wanted to tinker with the picture tag since it was a cool feature!-->
         <a class="pull-left" href="index.html"><picture><source media=
         "(max-width: 768px)" srcset="logotype-small.png"> <source srcset=
         "logotype.png"> <img alt="Logotype" src="logotype.png"></picture></a>
@@ -48,7 +49,7 @@
 
             <li class="menu-list-item">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">The
-              Store<span aria-hidden="true" class="fa fa-money"></span></a>
+              Store<span class="fa fa-money"></span></a>
 
               <ul class="dropdown-menu">
                 <li>
@@ -79,8 +80,7 @@
 
 
             <li class="menu-list-item">
-              <a href="blog.html">Blog <span aria-hidden="true" class=
-              "fa fa-book"></span></a>
+              <a href="blog.html">Blog <span class="fa fa-book"></span></a>
             </li>
           </ul>
         </div>
@@ -111,32 +111,54 @@
   </nav>
 
 
-
-  <div class="content-wrapper" id="welcome">
-    <h1>Welcome to Coast City Collectibles</h1>
-
-
-    <h2>Such a well kept secret - we ought to <em>kill you</em>, were you to utter our
-    name.</h2>
-
-  <!-- I'm cheating a little by using the supplied bootstrap img-responsive class-->
-    <p><strong>The most complete selection of collectibles</strong>, this side of the pond.
-    The home of rare and OOP titles, smashing toys, dope records as well as the
-    home of the best podcast mankind has ever seen!</p>
-    <img alt="Storefront" class=" img-rounded img-responsive" height="400" id=
-    "welcome-image" src="storefront.jpg" width="600">
-
-    <p>We're not only a place where you spend all of that hard earned cash. We
-    also...</p>
+  <div class="content-wrapper">
+    <h2 id="tables">Items in stock</h2>
 
 
-    <h2><em>BUY</em> your used junk as well!</h2>
+    <form class="form-inline">
+      <div class="container">
+        <label for="search-form">Search Stock:</label>
+        <input class="form-control" data-ng-model="search" placeholder=
+        "Search for an item..." type="text" id="search-form">
+      </div>
+    </form>
 
 
-    <p>Do not hesitate, come visit the store or give us a call today!</p>
+    <div class="bs-component" data-ng-controller="liststock">
+      <table class="table table-condensed table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Type</th>
+
+            <th>Title</th>
+
+            <th>Publisher/Brand</th>
+
+            <th>Grade</th>
+
+            <th>Price</th>
+          </tr>
+        </thead>
+
+        <!-- uses the data attribute to validate. ng-repeat fills the table with all present matching values stored in the JSON file in their respective row-->
+        <tbody>
+          <tr data-ng-repeat="stock in stocked | filter: search">
+            <td>{{ stock.type }}</td>
+
+            <td>{{ stock.title }}</td>
+
+            <td>{{ stock.publisher }}</td>
+
+            <td>{{ stock.grade }}</td>
+
+            <td>{{ stock.price }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
-  <!-- Uses the address tag for semantics. Also uses aria-hidden to hide the purely decorative elements in the footer-->
+
   <div class="container-footer">
     <footer>
       <address>
@@ -144,12 +166,13 @@
         "fa fa-envelope">Send us an email</span></a> <a href=
         "tel:+113371337"><span aria-hidden="true" class="fa fa-phone">(133) 713
         337Ask for Hal</span></a>
+
         <p><span aria-hidden="true" class="fa fa-map-marker"></span>22 Lantern
         rd, Coast City, CA 997 07</p>
       </address>
     </footer>
   </div>
-  <div class="validator">
+<div class="validator">
       <a href="http://validator.w3.org/check?uri=referer">
       <img src="img/html5.png" alt="HTML5 validation icon">
       </a>
@@ -157,5 +180,8 @@
       <img src="img/css.png" alt="CSS3 validation icon">
       </a>
 </div>
+  <!-- quicker load times in body-->
+  <script src="searchapp.js">
+  </script>
 </body>
 </html>
