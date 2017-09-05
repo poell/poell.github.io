@@ -30,7 +30,7 @@ $('#roll1').keyup(function () {
   $('#displayRoll1').text($(this).val());
 });
 $(document).ready(function(){
-    $("div").click(function(){
+    $("p").click(function(){
         $(this).hide();
     });
 });
