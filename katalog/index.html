@@ -14,13 +14,18 @@ p {
     max-width: 800px;
     margin: auto;
 }
+    
+    .tooltip {
+        padding-left: .5em;
+    }
+    
 </style>
 </head>
 <body>
 <div class="content">
 <h1>Katalogisering i turtle</h1> &#x1F400;  MASTER<br>
 <b>Fyll i attribut till manifestationen</b><br>
-<input type="text" id="manifestation" /> Fyll i manifestation. <br>
+<input type="text" id="manifestation" /><span class="tooltip" title="Fyll i ett egetvalt manifestationsnummer, exempelvis 1.1.1">Manifestationsnummer.</span><br>
 <input type="text" id="isbn" /> Fyll i ISBN.<br>
 <input type="text" id="issn" /> Fyll i ISSN. <br>
 <input type="text" id="titel" /> Fyll i boktitel. (ej undertitel/ text efter bindestreck)<br>

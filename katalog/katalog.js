@@ -53,6 +53,9 @@ $('#medupphov1').keyup(function () {
 $('#roll1').keyup(function () {
   $('#displayRoll1').text($(this).val());
 });
+$( function() {
+    $( document ).tooltip();
+  });
 $(document).ready(function(){
     $("p").click(function(){
         $(this).hide();
