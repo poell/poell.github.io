@@ -4,8 +4,15 @@
 <title>Splinter</title>
 <meta charset="utf-8"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+.content {
+    max-width: 500px;
+    margin: auto;
+}
+</style>
 </head>
 <body>
+<div class="content">
 <input type="text" id="manifestation" /> Fyll i manifestation. <br>
 <input type="text" id="isbn" /> Fyll i ISBN.<br>
 <input type="text" id="issn" /> Fyll i ISSN. <br>
@@ -19,12 +26,13 @@
 <br> m<span id="displayManifestation"></span><br>
 <div>IdentifikatorIsbn/020a <span id="displayIsbn"></span> ; <br> </div>
 <div>IdentifikatorIssn/022a <span id="displayIssn"></span> ;<br> </div>
-<div>Huvudtitel245/a <span id="displayTitel"></span> ; <br></div>
+ Huvudtitel245/a <span id="displayTitel"></span> ; <br>
 <div>OvrigTitelinformation/245b <span id="displayUndertitel"></span> ;<br> </div>
 <div>Upphovsuppgift/245c <span id="displayUpphov"></span> ; <br> </div>
 <div>upplageuppgift/250a <span id="displayUpplaga"></span> ;<br> </div>
 <br>
 <b>Notera att den sista raden skall avslutas med . istället för ; </b>
+</div>
 <script src="katalog.js"></script>
 </body>
 </html>
