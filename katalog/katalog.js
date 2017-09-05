@@ -20,6 +20,12 @@ $('#upphov').keyup(function () {
 $('#upplaga').keyup(function () {
   $('#displayUpplaga').text($(this).val());
 });
+$('#medupphov1').keyup(function () {
+  $('#displayMedupphov1').text($(this).val());
+});
+$('#roll1').keyup(function () {
+  $('#displayRoll1').text($(this).val());
+});
 $(document).ready(function(){
     $("div").click(function(){
         $(this).hide();
