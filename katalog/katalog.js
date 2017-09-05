@@ -20,5 +20,4 @@ $('#upphov').keyup(function () {
 $('#upplaga').keyup(function () {
   $('#displayUpplaga').text($(this).val());
 });
-});
 
