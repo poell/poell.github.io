@@ -20,6 +20,9 @@ $('#upphov').keyup(function () {
 $('#upplaga').keyup(function () {
   $('#displayUpplaga').text($(this).val());
 });
+$('#upplageupphov').keyup(function () {
+  $('#displayUpplageupphov').text($(this).val());
+});
 $('#medupphov1').keyup(function () {
   $('#displayMedupphov1').text($(this).val());
 });
