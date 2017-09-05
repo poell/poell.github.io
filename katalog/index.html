@@ -12,7 +12,7 @@
 </style>
 </head>
 <body>
-<div class="content">
+<b>Fyll i attribut till manifestationen</b>
 <input type="text" id="manifestation" /> Fyll i manifestation. <br>
 <input type="text" id="isbn" /> Fyll i ISBN.<br>
 <input type="text" id="issn" /> Fyll i ISSN. <br>
@@ -20,6 +20,42 @@
 <input type="text" id="undertitel" /> Fyll i undertitel.<br>
 <input type="text" id="upphov" /> Fyll i upphovsuppgift.<br>
 <input type="text" id="upplaga" /> Fyll i upplaga om en sådan existerar.<br>
+<input type="text" id="upplageupphov" /> Fyll i upplaga om en sådan existerar.<br>
+<input type="text" id="utgivningsort" /> Fyll i utgivningsort om en sådan existerar.<br>
+<input type="text" id="utgivningsnamn" /> Fyll i upplaga om en sådan existerar.<br>
+<input type="text" id="utgivningstid" /> Fyll i upplaga om en sådan existerar.<br>
+<input type="text" id="medietyp" /> Se s61 om det ej är en trycksak<br>
+<input type="text" id="barartyp" /> Se s61 om det ej är en trycksak<br>
+<input type="text" id="bararomfang" /> Fyll i antalet sidor.<br>
+<input type="text" id="huvudtitelserie" /> Fyll i upplaga om en sådan existerar.<br>
+
+<b>Fyll i attribut för relaterade personer</b><br>
+<input type="text" id="fornamn1" /> Använd formatet Efternamn, Förnamn. <br>
+<input type="text" id="levnad1" /> Fyll i levnadstid<br>
+<input type="text" id="viaf1" /> Fyll i viafid (se viaf.org) <br><br>
+    
+<input type="text" id="fornamn2" /> Använd formatet Efternamn, Förnamn. <br>
+<input type="text" id="levnad2" /> Fyll i levnadstid<br>
+<input type="text" id="viaf2" /> Fyll i viafid (se viaf.org) <br><br>
+    
+<input type="text" id="fornamn3" /> Använd formatet Efternamn, Förnamn. <br>
+<input type="text" id="levnad3" /> Fyll i levnadstid<br>
+<input type="text" id="viaf3" /> Fyll i viafid (se viaf.org) <br><br>
+
+
+<b>Fyll i relationer</b><br><br>
+
+<input type="text" id="huvudupphov" /> Fyll i den person (px) som har huvudupphovet (exempelvis författaren av ett översatt verk) <br>
+<input type="text" id="medupphov1" /> Fyll i den person (py) som har medupphov (exempelvis författaren av ett översatt verk) <br>
+<input type="text" id="roll1" /> Fyll i den roll (py) haft (aut (författare), trl(översättare), edt(redaktör), oth(annan) <br>
+
+
+
+Huvudupphov
+Medupphov
+Serie
+
+
 
 <br>
 <b>Attribut till manifestationen:</b><br>
@@ -32,7 +68,8 @@
 <div>upplageuppgift/250a <span id="displayUpplaga"></span> ;<br> </div>
 <br>
 <b>Notera att den sista raden skall avslutas med . istället för ; </b>
-</div>
+<div>Medupphov/700 [id/a <span id="displayMedupphov1"></span>; roll/4 <span id="displayRoll1"></span>] ;<br> </div>
+
 <script src="katalog.js"></script>
 </body>
 </html>
