@@ -20,9 +20,3 @@ $('#upphov').keyup(function () {
 $('#upplaga').keyup(function () {
   $('#displayUpplaga').text($(this).val());
 });
-
-$(document).ready(function(){
-    $("div").click(function(){
-        $(this).hide();
-    });
-    });
