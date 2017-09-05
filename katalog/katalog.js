@@ -23,6 +23,27 @@ $('#upplaga').keyup(function () {
 $('#upplageupphov').keyup(function () {
   $('#displayUpplageupphov').text($(this).val());
 });
+$('#utgivningsort').keyup(function () {
+  $('#displayUtgivningsort').text($(this).val());
+});
+$('#utgivningsnamn').keyup(function () {
+  $('#displayUtgivningsnamn').text($(this).val());
+});
+$('#utgivningstid').keyup(function () {
+  $('#displayUtgivningstid').text($(this).val());
+});
+$('#medietyp').keyup(function () {
+  $('#displayMedietyp').text($(this).val());
+});
+$('#barartyp').keyup(function () {
+  $('#displayBarartyp').text($(this).val());
+});
+$('#bararomfang').keyup(function () {
+  $('#displayBararomfang').text($(this).val());
+});
+$('#huvudtitelserie').keyup(function () {
+  $('#displayHuvudtitelserie').text($(this).val());
+});
 $('#medupphov1').keyup(function () {
   $('#displayMedupphov1').text($(this).val());
 });
