@@ -1,4 +1,3 @@
-
 $('#manifestation').keyup(function () {
   $('#displayManifestation').text($(this).val());
 });
