@@ -27,7 +27,7 @@ $('#upplageupphov').keyup(function () {
   $('#displayUpplageupphov').text($(this).val());
 });
 $('#utgivningsort').keyup(function () {
-  $('#displayutgivningsort').text($(this).val());
+  $('#displayUtgivningsort').text($(this).val());
 });
 $('#medupphov1').keyup(function () {
   $('#displayMedupphov1').text($(this).val());
