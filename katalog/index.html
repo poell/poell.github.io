@@ -13,7 +13,16 @@ p {
 .content {
     max-width: 800px;
     margin: auto;
+    border-radius: 20px;
+    border: 1px solid #AFAFAF;
 }
+    
+    .tut {
+        border-radius: 25px;
+        border: 2px solid #fff;
+        padding: 20px;
+        
+    }
     
     .tooltip {
         padding-left: .5em;
@@ -21,7 +30,7 @@ p {
 html { 
         background: url('http://i.imgur.com/erUmB5m.jpg');
         background-repeat:repeat;
-        color: #A0630E;
+        color: #828181;
 
     }
 </style>
@@ -145,38 +154,38 @@ Notera att relaterade verk kan ha fler attribut. Fyll i dessa utifrån de uppgif
 <div id="tut" style="display:none">
 <b>Snabba frågor och svar</b><br>
 <var>Går det att lägga in fler fält?</var><br>
-Nej. <br>
+Nej. <br><br>
 <var>Jag råkade klicka på ett fält jag inte ville ta bort? </var><br>
-Ladda om sidan eller för manuellt in informationen. <br>
+Ladda om sidan eller för manuellt in informationen. <br><br>
 <var>Varför står det medupphov på vissa ställen?</var><br>
-De namn som matas in i ett fält som avser ett medupphov visas sedan i sammanställningen under medupphov, tyvärr hittade jag inget enkelt sätt att göra det dynamiskt.<br>
+De namn som matas in i ett fält som avser ett medupphov visas sedan i sammanställningen under medupphov, tyvärr hittade jag inget enkelt sätt att göra det dynamiskt.<br><br>
 <var>Jag letade upp ett ISSN-nummer för en seriell resurs online?</var><br>
-Lägg in uppgiften inom [].<br>
+Lägg in uppgiften inom [].<br><br>
 <var>Behöver jag lägga till en stat (inom [])?</var><br>
-För svenska orter behövs det oftast inte. Se dock t.ex. Athens, GR jämfört med Athens, GA.. Finns möjlighet för missförstånd rekommenderar jag att stat/land tas med.<br>
+För svenska orter behövs det oftast inte. Se dock t.ex. Athens, GR jämfört med Athens, GA.. Finns möjlighet för missförstånd rekommenderar jag att stat/land tas med.<br><br>
 <em>Serieuppgift?</em><br>
-Serieuppgiften är relativt komplex. (se s. 64-65 i kompendiet) Här matas information in som rör serien (exv. en tidskriftssamling eller bokserie). Vanliga attribut som används är HuvudtitelTillSerie/a NumreringInomSerie/v och Issn/022a. En sträng kan se ut på följande sätt [HuvudtitelTillSerie/a Titelpåserie ; NumreringInomSerie/v 123] <br>
+Serieuppgiften är relativt komplex. (se s. 64-65 i kompendiet) Här matas information in som rör serien (exv. en tidskriftssamling eller bokserie). Vanliga attribut som används är HuvudtitelTillSerie/a NumreringInomSerie/v och Issn/022a. En sträng kan se ut på följande sätt [HuvudtitelTillSerie/a Titelpåserie ; NumreringInomSerie/v 123] <br><br>
 Hur fungerar detta verktyg?<br>
-<var>Stora eller små bokstäver?</var><br>
+<var>Stora eller små bokstäver?</var><br><br>
 Enligt KBs praxis skall vi följa "svenska skrivregler". Exempel finns på deras hemsida. Med andra ord, skriv av felstavningar men se upp för versaler?<br>
 Förhoppningsvis är det tillräckligt intuitivt för att det skall gå att använda utan vidare instruktioner. Annars följer en guide nedan:<br>
 Som underlag i denna guide används boken Dagarna och Nätterna. Klickbara inscannade kopior av relevant data finns här:<br>
 <a href="http://i.imgur.com/CLkx3Zg.jpg"><img src="bilder/blad1.JPG" height="568" width="331" alt="blad ett"></a><br>
 <a href="http://i.imgur.com/6d7ywGP.jpg"><img src="bilder/blad2.JPG" height="544" width="321" alt="blad två"></a><br><br>
-Det första vi gör är att ge boken ett manifestationsnummer. Det är upp till dig som katalogisatör att bestämma vilket nummer du vill använda. Jag har valt att utgå från den numrering Yoshiko använde under föreläsningen. Jag fyller därför i m1.1.1 i fältet Manifestationsnummer under "Fyll i attribut till manifestationen"<br>
+Det första vi gör är att ge boken ett manifestationsnummer. Det är upp till dig som katalogisatör att bestämma vilket nummer du vill använda. Jag har valt att utgå från den numrering Yoshiko använde under föreläsningen. Jag fyller därför i m1.1.1 i fältet Manifestationsnummer under "Fyll i attribut till manifestationen"<br><br>
 Precis som när vi manuellt antecknar katalogdatan utgår vi sedan ifrån den information det fysiska exemplaret ger oss.<br>
 Vi väljer sedan att utgå från titelbladet. Vi går systematiskt igenom den information som presenteras.<br>
-Titeln är: "DAGARNA OCH NÄTTERNA". Vi matar in titeln i fältet "Huvudtitel". Under huvudtiteln står "EN DESERTÖRS ROMAN". Detta räknas som en undertitel. Vi lägger därför in det i fältet "Övrig Titelinformation".<br>
-Vidare kan vi se att "Ingar Gadd och Ylva Lindberg" översatt Alfred Jarrys originalverk. Enligt Yoshikos övningsexempel skiljer vi på författaren och översättaren med hjälp av ett semikolon. Även "Efterord: Peter Glas" skall ligga under Upphovsuppgift. Med andra ord skriver vi "Alfred Jarry ; översättning Ingar Gadd och Ylva Lindberg ; Efterord: Peter Glas" i fältet Upphovsuppgift.<br>
+Titeln är: "DAGARNA OCH NÄTTERNA". Vi matar in titeln i fältet "Huvudtitel". Under huvudtiteln står "EN DESERTÖRS ROMAN". Detta räknas som en undertitel. Vi lägger därför in det i fältet "Övrig Titelinformation".<br><br>
+Vidare kan vi se att "Ingar Gadd och Ylva Lindberg" översatt Alfred Jarrys originalverk. Enligt Yoshikos övningsexempel skiljer vi på författaren och översättaren med hjälp av ett semikolon. Även "Efterord: Peter Glas" skall ligga under Upphovsuppgift. Med andra ord skriver vi "Alfred Jarry ; översättning Ingar Gadd och Ylva Lindberg ; Efterord: Peter Glas" i fältet Upphovsuppgift.<br><br>
 Längst ned på titelbladet står förlagets namn: Bakhåll. Förlagets namn skrivs som det står under "Utgivningsnamn". För ytterliggare information vänder vi på titelbladet.<br>
 För enkelhetens skull fortsätter vi att mata in information om förlaget. BAKHÅLL ligger i Lund, denna information matas in i "Utgivningsort". Vi användar tryckåret som "Utgivningstid". 2005 läggs in i fältet.<br>
-Vi hittar ett ISBN-nummer (91 7742 244 9). Det matas in utan bindestreck och blanksteg (9177422449) i fältet "Identifikator ISBN".<br>
-Här finns också en originaltitel. "Les jours et les Nuits". Denna titel används under "Attribut för relaterade verk/manifestationer" under "Huvudtitel för annat verk" eftersom de rör en annan manifestation än den vi håller i handen. Vidare definierar ett nytt manifestationsnummer för denna nya manifestation. Vi ger det numret 1.2.1 Eftersom vår manifestation är en översättning av originalverket bör vi fortfarande inleda manifestationsnumret med 1.<br>
-Förord förs inte in om det inte uppgår till 25% av bokens totala längd (?) om jag förstod Yoshiko rätt. Tryckort/Land har inte heller förts in i några av övningsexempeln. Den sista paginerade sidan är 158. Vi för därför in "158 sidor" i fältet "Bäraromfång".<br>
+Vi hittar ett ISBN-nummer (91 7742 244 9). Det matas in utan bindestreck och blanksteg (9177422449) i fältet "Identifikator ISBN".<br><br>
+Här finns också en originaltitel. "Les jours et les Nuits". Denna titel används under "Attribut för relaterade verk/manifestationer" under "Huvudtitel för annat verk" eftersom de rör en annan manifestation än den vi håller i handen. Vidare definierar ett nytt manifestationsnummer för denna nya manifestation. Vi ger det numret 1.2.1 Eftersom vår manifestation är en översättning av originalverket bör vi fortfarande inleda manifestationsnumret med 1.<br><br>
+Förord förs inte in om det inte uppgår till 25% av bokens totala längd. Samma sak torde gälla efterord. Tryckort/Land har inte heller förts in i några av övningsexempeln. Den sista paginerade sidan är 158. Vi för därför in "158 sidor" i fältet "Bäraromfång".<br>
 Vidare behöver vi bestämma vilken slags medietyp och vilken bärartyp vi skall fylla i. (Utförligare information finns på sidan 61 i kompendiet.)<br>
 Medietypen sätts till: audio, dator, projicerad, mikroform, mikroskopisk, stereografisk, omedierad, video, annan eller ospecifierad. Den absolut vanligaste formen är "omedierad" som används för trycksaker. Vi för därför in "omedierad" som medietyp. Bärartypen är för inbundna böcker volym. "volym" förs därför in under bärartyp. <br><br>
 Nu skall vi föra in de personer som nämnts i manifestationen.>br>
-Författaren av originalverket är Alfred Jarry. Namn matas in i följande format: Efternamn, Förnamn. "Jarry, Alfred" förs därför in som föredraget namn under "Fyll i attribut för person". Vi ger Jarry ett nummer. Detta skrivs i följande format: px. Exempelvis p3. Vi matar in p3 i fältet "Ange ett nummer för den första personen".<br>
+Författaren av originalverket är Alfred Jarry. Namn matas in i följande format: Efternamn, Förnamn. "Jarry, Alfred" förs därför in som föredraget namn under "Fyll i attribut för person". Vi ger Jarry ett nummer. Detta skrivs i följande format: px. Exempelvis p3. Vi matar in p3 i fältet "Ange ett nummer för den första personen".<br><br>
     Vi vet inte när Alfred Jarry levde. Vi behöver dock fylla i hans levnadstid. Detta fylls i i formatet: Födelseår- (Dödsår) (då det är känt, eller personen är framliden). Inte heller vet vi vilket ViafId vi skall mata in. Denna information är dock enkel att hitta på <a href="htts://viaf.org">VIAF</a>, som är en auktoritetsdatadatabas. Matar vi in Jarry ser vi att han levde mellan 1873-1907. Klickar vi på namnet hamnar vi <a href="https://viaf.org/viaf/66469054/#Jarry,_Alfred,_1873-1907.">här</a>. På webbplatsen går det att utläsa att Jarrys VIAF ID är 66469054. Vi matar därför in "1873-1907" i fältet "levnadstid" samt 66469054 i fältet ViafId. Samma process upprepas sedan för översättarna.<br><br>
     Vi gör likadant med översättarna. Vi anger p4 som nummer för den andra personen och fyller i namnet enligt tidigare nämnda format "Gadd, Ingar". Gadd är född "1938-", det matas in i fältet "levnadstid" har VIAF Id 17456586, detta matas in i Viaf-fältet.<br><br>
     I fältet för nummer för den tredje personen matar vi in p5. Ylva Lindberg är en mer problematisk post. Det finns två poster i VIAF-databasen. En av posterna listar födelseåret, 1970. Denna post innehåller fler böcker (ett skiljekriterium som nämns i kompendiet) och används av KB. Vi använder därför detta VIAFid. Det är 233200364 och matas in i Viaf-fältet för person tre. <br><br>
