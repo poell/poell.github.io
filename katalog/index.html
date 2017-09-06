@@ -28,56 +28,59 @@ html {
 </head>
 <body>
 <div class="content">
-<h1>Katalogisering i &#x1F422;</h1> mstr&#x1F400;<br> För musen över respektive rubrik för en förklaring av sagda koncept.<br>
+<h1>Katalogisering i &#x1F422;</h1> mstr&#x1F400;<br> För musen över en rubrik för en förklaring.<br>
+Du behöver inte klicka någonstans för att den turtle-kompatibla listan längst ner på sidan skall uppdateras.<br>
+Klicka på en oanvänd rad eller rubrik i listan för snyggare formattering.<br> 
 <b>Fyll i attribut till manifestationen</b><br>
 <input type="text" id="manifestation" /><span class="tooltip" title="Fyll i ett egenvalt manifestationsnummer, exempelvis 1.1.1">Manifestationsnummer.</span><br>
 <input type="text" id="isbn" /><span class="tooltip" title="Fyll i ISBN-numret för manifestationen i fråga.">Identifikator ISBN.</span><br>
 <input type="text" id="issn" /><span class="tooltip" title="Fyll i ISSN om ett sådant existerar.">Identifikator ISSN.</span> <br>
 <input type="text" id="titel" /><span class="tooltip" title="Fyll i titeln på verket. Undertitel/text efter - skall ej inkluderas här.">Huvudtitel.</span><br>
 <input type="text" id="undertitel" /><span class="tooltip" title="Fyll i eventuell undertitel. Här hamnar också titeltext efter -streck">Övrig Titelinformation.</span><br>
-<input type="text" id="upphov" /><span class="tooltip" title="Fyll i eventuell undertitel. Här hamnar också titeltext efter -streck">Upphovsuppgift</span><br>
-<input type="text" id="upplaga" /><span class="tooltip" title="Fyll i eventuell undertitel. Här hamnar också titeltext efter -streck">Upplageuppgift</span><br>
-<input type="text" id="upplageupphov" /><span class="tooltip" title="Fyll i eventuell undertitel. Här hamnar också titeltext efter -streck">Upplagespecifik upphovsuppgift</span><br>
-<input type="text" id="utgivningsort" /><span class="tooltip" title="Fyll i eventuell undertitel. Här hamnar också titeltext efter -streck">Utgivningsort</span><br>
-<input type="text" id="utgivningsnamn" /><span class="tooltip" title="Fyll i eventuell undertitel. Här hamnar också titeltext efter -streck">Utgivningsnamn</span><br>
-<input type="text" id="utgivningstid" /><span class="tooltip" title="Fyll i eventuell undertitel. Här hamnar också titeltext efter -streck">Utgivningstid</span><br>
-<input type="text" id="medietyp" /><span class="tooltip" title="Fyll i eventuell undertitel. Här hamnar också titeltext efter -streck">Medietyp</span><br>
-<input type="text" id="barartyp" /><span class="tooltip" title="Fyll i eventuell undertitel. Här hamnar också titeltext efter -streck">Bärartyp</span><br>
-<input type="text" id="bararomfang" /><span class="tooltip" title="Fyll i eventuell undertitel. Här hamnar också titeltext efter -streck">Bäraromfång</span><br>
-<input type="text" id="huvudtitelserie" /><span class="tooltip" title="Fyll i eventuell undertitel. Här hamnar också titeltext efter -streck">Huvudtitel till serie</span><br>
+<input type="text" id="upphov" /><span class="tooltip" title="Här fyller du i författarens namn som den står på titelbladet. Är det en översättning fylls fältet i på följande sätt: Författare ; ... av Översättare">Upphovsuppgift</span><br>
+<input type="text" id="upplaga" /><span class="tooltip" title="Fyll i vilken upplaga eller utgåva det är. Skrivs som det står i manifestationen.">Upplageuppgift</span><br>
+<input type="text" id="upplageupphov" /><span class="tooltip" title="Upphovsinformation som rör den specifika upplagan. Se exv Exempel 2">Upplagespecifik upphovsuppgift</span><br>
+<input type="text" id="utgivningsort" /><span class="tooltip" title="Den ort där förlaget finns.">Utgivningsort</span><br>
+<input type="text" id="utgivningsnamn" /><span class="tooltip" title="Namn på förlaget som det står i manifestationen">Utgivningsnamn</span><br>
+<input type="text" id="utgivningstid" /><span class="tooltip" title="Det år boken gavs ut. Används copyrightåret klamras årtalet.">Utgivningstid</span><br>
+<input type="text" id="medietyp" /><span class="tooltip" title="Se sida 61 i kompendiet eller guiden som ligger längst ner på sidan. Oftast omedierad.">Medietyp</span><br>
+<input type="text" id="barartyp" /><span class="tooltip" title="Volym om det är en bok. Se en komplett förteckning i kompendiet på sidan 61">Bärartyp</span><br>
+<input type="text" id="bararomfang" /><span class="tooltip" title="För böcker: Antal sidor. Används mer än en slags paginering tas bägge upp, avskilda med ett kommatecken, exv. xi, 200 sidor">Bäraromfång</span><br>
+<input type="text" id="huvudtitelserie" /><span class="tooltip" title="Ingår titeln i en serie listas här titeln på serien. Behöver du lägga till ytterligare information för att förtydliga vilken serie och vilken volym i serien titeln tillhör? Se exempel 4.">Huvudtitel till serie</span><br>
 
 <b>Fyll i attribut för relaterade verk</b><br>
-<input type="text" id="seriemanifestation" />Manifestationsnummer för serie (mx.x.x)<br>
-<input type="text" id="relhuvudtitel1" />Huvudtitel för serie<br>
-<input type="text" id="verkmanifestation" />Manifestationsnummer för annat verk (mx.x.x)<br>
-<input type="text" id="relhuvudtitel2" />Huvudtitel för annat verk<br>
-Notera att relaterade verk kan ha fler egenskaper. Fyll i dessa utifrån de uppgifter som ges i den ursprungliga manifestationen på samma sätt som du hade fört in dessa uppgifter för huvudmanifestationen.<br> 
+<input type="text" id="seriemanifestation" /><span class="tooltip" title=" Fylls i enligt formatet mx.x.x exv. m2.1.1 Ingår titeln i en serie fyller du här i ett egenskapat manifestationsnummer. Tänk på subjekt-predikat-objekt. En serie är inte samme subjekt och skall därför ha en annan förstasiffra.">Manifestationsnummer för serie (t.ex. m2.1.1)</span><br>
+<input type="text" id="relhuvudtitel1" /><span class="tooltip" title="Fyll i titeln på serien.">Huvudtitel för serie</span><br>
+<input type="text" id="verkmanifestation" /><span class="tooltip" title="Fylls i enligt formatet mx.x.x exv. m1.2.1 Subjektet är fortfarande detsamma men det är skrivet på ett annat språk, ändra därför den andra siffran. Se även Manifestationsnummer för serie.">Manifestationsnummer för annat verk (t.ex. m1.2.1)</span><br>
+<input type="text" id="relhuvudtitel2" /><span class="tooltip" title="Fyll i titeln på det andra verket. Här listas exempelvis originaltiteln på en översatt bok.">Huvudtitel för annat verk. </span><br>
+Notera att relaterade verk kan ha fler attribut. Fyll i dessa utifrån de uppgifter som ges i den ursprungliga manifestationen på samma sätt som du hade fört in dessa uppgifter för huvudmanifestationen.<br> 
 
-<b>Fyll i attribut för relaterade personer</b><br><br>
-<input type="text" id="person1" />Ange ett nummer för den första personen. <br>
-<input type="text" id="fornamn1" />Föredraget namn för person (Efternamn, Förnamn).<br>
-<input type="text" id="levnad1" />Levnadstid<br>
-<input type="text" id="viaf1" />ViafId<br><br>
 
-<input type="text" id="person2" />Ange ett nummer för den första personen. <br>
-<input type="text" id="fornamn2" />Föredraget namn för person (Efternamn, Förnamn).<br>
-<input type="text" id="levnad2" />Fyll i levnadstid<br>
-<input type="text" id="viaf2" />ViafId<br><br>
+<b>Fyll i attribut för relaterade personer</b><br>Person 1<br>
+<input type="text" id="person1" /><span class="tooltip" title="Skapa ett unikt nummer för person ett. Det spelar ingen roll vilket nummer du använder bara du är konsekvent. Skrivs enligt formatet px exv. p1">Ange ett nummer för den första personen. (t.ex. p1) </span><br>
+<input type="text" id="fornamn1" /><span class="tooltip" title="Fyll i personens namn som det står på Viaf. Formatet är Efternamn, Förnamn exv. Vian, Boris">Föredraget namn för person ett.</span><br>
+<input type="text" id="levnad1" /><span class="tooltip" title="Fyll i personens levnadstid. Formatet som används är Födelseår-Dödsår. exv. 1901-1929. Är personen vid liv används Födelseår- t.ex. 1970- Använd den levnadstid som finns listad i Viaf.">Levnadstid för person ett.</span><br>
+<input type="text" id="viaf1" /><span class="tooltip" title="Fyll i det ViafId du finner om du söker efter författaren på viaf.org. Finns flera namn, använd det med flest verk. Eller möjligtvis det som används av KB.">ViafId för person ett.</span><br>Person 2<br>
+
+<input type="text" id="person2" /><span class="tooltip" title="Skapa ett unikt nummer för person två. Det spelar ingen roll vilket nummer du använder bara du är konsekvent. Skrivs enligt formatet px exv. p2">Ange ett nummer för den andra personen. (t.ex. p2) </span> <br>
+<input type="text" id="fornamn2" /><span class="tooltip" title="Fyll i personens namn som det står på Viaf. Formatet är Efternamn, Förnamn exv. Vian, Boris">Föredraget namn för person två.</span><br>
+<input type="text" id="levnad2" /><span class="tooltip" title="Fyll i personens levnadstid. Formatet som används är Födelseår-Dödsår. exv. 1901-1929. Är personen vid liv används Födelseår- t.ex. 1970- Använd den levnadstid som finns listad i Viaf.">Levnadstid för person ett.</span><br>
+<input type="text" id="viaf2" /><span class="tooltip" title="Fyll i det ViafId du finner om du söker efter författaren på viaf.org. Finns flera namn, använd det med flest verk. Eller möjligtvis det som används av KB.">ViafId för person två.</span><br>Person 3<br>
     
-<input type="text" id="person3" /> Ange ett nummer för den tredje personen. <br>
-<input type="text" id="fornamn3" />Föredraget namn för person (Efternamn, Förnamn).<br>
-<input type="text" id="levnad3" />Fyll i levnadstid<br>
-<input type="text" id="viaf3" />ViafId<br><br>
+<input type="text" id="person3" /><span class="tooltip" title="Skapa ett unikt nummer för person tre. Det spelar ingen roll vilket nummer du använder bara du är konsekvent. Skrivs enligt formatet px exv. p3">Ange ett nummer för den tredje personen. (t.ex. p3)</span><br>
+<input type="text" id="fornamn3" /><span class="tooltip" title="Fyll i personens namn som det står på Viaf. Formatet är Efternamn, Förnamn exv. Vian, Boris">Föredraget namn för person tre.</span><br>
+<input type="text" id="levnad3" /><span class="tooltip" title="Fyll i personens levnadstid. Formatet som används är Födelseår-Dödsår. exv. 1901-1929. Är personen vid liv används Födelseår- t.ex. 1970- Använd den levnadstid som finns listad i Viaf.">Levnadstid för person tre.</span><br>
+<input type="text" id="viaf3" /><span class="tooltip" title="Fyll i det ViafId du finner om du söker efter författaren på viaf.org. Finns flera namn, använd det med flest verk. Eller möjligtvis det som används av KB.">ViafId för person tre.</span><br><br>
 
 
 <b>Fyll i relationer</b><br><br>
 
-<input type="text" id="huvudupphov" />Fyll i den person (px) som har huvudupphovet (exempelvis författaren av ett översatt verk) <br>
-<input type="text" id="medupphov1" />Fyll i en person (py) som har medupphov (exempelvis författaren av ett översatt verk) <br>
-<input type="text" id="medupphov2" />Fyll i en person (pz) som har medupphov (exempelvis författaren av ett översatt verk) <br>
-<input type="text" id="roll1" />Fyll i den roll (px) haft (aut (författare), trl(översättare), edt(redaktör), oth(annan) <br>
-<input type="text" id="roll2" />Fyll i den roll (py) haft (aut (författare), trl(översättare), edt(redaktör), oth(annan) <br>
-<input type="text" id="roll3" />Fyll i den roll (pz) haft (aut (författare), trl(översättare), edt(redaktör), oth(annan) <br>
+<input type="text" id="huvudupphov" /><span class="tooltip" title="Fyll i den person (px) som har huvudupphovet (exempelvis författaren av ett översatt verk)">Fyll i den person (px) som har huvudupphovet (exempelvis författaren av ett översatt verk)</span>  <br>
+<input type="text" id="medupphov1" /><span class="tooltip" title="FyllFyll i det p-nummer (t.ex. p2) som du tidigare tilldelade den person som har medupphov till verket.">Fyll i det p-nummer (t.ex. p2) som du tidigare tilldelade den person som har medupphov till verket.</span> <br>
+<input type="text" id="medupphov2" /><span class="tooltip" title="FyllFyll i det p-nummer (t.ex. p3) som du tidigare tilldelade den person som har medupphov till verket.">Fyll i det p-nummer (t.ex. p3) som du tidigare tilldelade den person som har medupphov till verket.</span> <br>
+<input type="text" id="roll1" /><span class="tooltip" title="Fyll i den roll personen med huvudupphov haft, rollerna äraut (författare), trl(översättare), edt(redaktör), oth(annan)">Fyll i den roll personen med huvudupphuv haft.</span><br>
+    <input type="text" id="roll2" /><span class="tooltip" title="Fyll i den roll person två, med medupphov haft, rollerna är aut (författare), trl (översättare), edt (redaktör) eller oth (annan)">Fyll i den roll den första personen med medupphov haft.</span> <br>
+<input type="text" id="roll3" /><span class="tooltip" title="Fyll i den roll person tre, med medupphov haft, rollerna är aut (författare), trl (översättare), edt (redaktör) eller oth (annan)">Fyll i den roll den andra personen med medupphov haft.</span> <br>
 
 
 
@@ -98,7 +101,7 @@ Notera att relaterade verk kan ha fler egenskaper. Fyll i dessa utifrån de uppg
 <div>Barartyp/338a <span id="displayBarartyp"></span> ;<br> </div>
 <div><p>Bararomfang/300a <span id="displayBararomfang"></span> ;<br> </p></div>
 <div><p>HuvudtitelTillSerie/490a <span id="displayHuvudtitelserie"></span> .<br> </p></div>
-<p><b>Notera att den sista raden skall avslutas med . istället för ; </b></p>
+<p><b>Notera att den sista raden skall avslutas med . istället för ; oavsett vilket attribut som står sist.</b></p>
 
 <br><br>
 <p><b>Attribut för relaterade verk</b><br></p>
@@ -128,11 +131,12 @@ Notera att relaterade verk kan ha fler egenskaper. Fyll i dessa utifrån de uppg
 
 
 <p><b>Relationer</b><br></p>
-<div><p>Huvudupphov/100 [id/a <span id="displayHuvudupphov"></span> ; roll/4 <span id="displayRoll1"></span>] ;<br> </p></div>
-<div><p>Medupphov/700 [id/a <span id="displayMedupphov1"></span> ; roll/4 <span id="displayRoll2"></span>] ;<br> </p></div>
-<div><p>Medupphov/700 [id/a <span id="displayMedupphov2"></span> ; roll/4 <span id="displayRoll3"></span>] ;<br> </p></div>
 <div><p>Serie/830a <span id="displaySeriemanifestation2"></span> ;<br> </p></div>
 <div><p>Verktitel/240a <span id="displayVerkmanifestation2"></span> .<br> </p></div>
+<div><p>Huvudupphov/100 [id/a <span id="displayHuvudupphov"></span> ; roll/4 <span id="displayRoll1"></span> ] ;<br> </p></div>
+<div><p>Medupphov/700 [id/a <span id="displayMedupphov1"></span> ; roll/4 <span id="displayRoll2"></span> ] ;<br> </p></div>
+<div><p>Medupphov/700 [id/a <span id="displayMedupphov2"></span> ; roll/4 <span id="displayRoll3"></span> ] ;<br> </p></div>
+
 <br>
 <hr>
 <input type="button" id="btnShow" value="Visa Användarmanual"/>
