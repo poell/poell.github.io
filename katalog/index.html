@@ -19,7 +19,7 @@ p {
         padding-left: .5em;
     }
 html { 
-        background: url('http://i.imgur.com/uRWzKxo.jpg');
+        background: url('http://i.imgur.com/erUmB5m.jpg');
         background-repeat:repeat;
         color: #A0630E;
 
@@ -28,9 +28,9 @@ html {
 </head>
 <body>
 <div class="content">
-<h1>Katalogisering i &#x1F422;</h1> &#x1F400; För musen över respektive rubrik för en förklaring av sagda koncept. <br> MASTER<br>
+<h1>Katalogisering i &#x1F422;</h1> mstr&#x1F400;<br> För musen över respektive rubrik för en förklaring av sagda koncept.<br>
 <b>Fyll i attribut till manifestationen</b><br>
-<input type="text" id="manifestation" /><span class="tooltip" title="Fyll i ett egetvalt manifestationsnummer, exempelvis 1.1.1">Manifestationsnummer.</span><br>
+<input type="text" id="manifestation" /><span class="tooltip" title="Fyll i ett egenvalt manifestationsnummer, exempelvis 1.1.1">Manifestationsnummer.</span><br>
 <input type="text" id="isbn" /><span class="tooltip" title="Fyll i ISBN-numret för manifestationen i fråga.">Identifikator ISBN.</span><br>
 <input type="text" id="issn" /><span class="tooltip" title="Fyll i ISSN om ett sådant existerar.">Identifikator ISSN.</span> <br>
 <input type="text" id="titel" /><span class="tooltip" title="Fyll i titeln på verket. Undertitel/text efter - skall ej inkluderas här.">Huvudtitel.</span><br>
@@ -46,49 +46,83 @@ html {
 <input type="text" id="bararomfang" /><span class="tooltip" title="Fyll i eventuell undertitel. Här hamnar också titeltext efter -streck">Bäraromfång</span><br>
 <input type="text" id="huvudtitelserie" /><span class="tooltip" title="Fyll i eventuell undertitel. Här hamnar också titeltext efter -streck">Huvudtitel till serie</span><br>
 
-
+<b>Fyll i attribut för relaterade verk</b><br>
+<input type="text" id="seriemanifestation" />Manifestationsnummer för serie (mx.x.x)<br>
+<input type="text" id="relhuvudtitel1" />Huvudtitel för serie<br>
+<input type="text" id="verkmanifestation" />Manifestationsnummer för annat verk (mx.x.x)<br>
+<input type="text" id="relhuvudtitel2" />Huvudtitel för annat verk<br>
+Notera att relaterade verk kan ha fler egenskaper. Fyll i dessa utifrån de uppgifter som ges i den ursprungliga manifestationen på samma sätt som du hade fört in dessa uppgifter för huvudmanifestationen.<br> 
 <b>Fyll i attribut för relaterade personer</b><br><br>
-<input type="text" id="fornamn1" /> Använd formatet Efternamn, Förnamn. <br>
-<input type="text" id="levnad1" /> Fyll i levnadstid<br>
-<input type="text" id="viaf1" /> Fyll i viafid (se viaf.org) <br><br>
-    
-<input type="text" id="fornamn2" /> Använd formatet Efternamn, Förnamn. <br>
+<input type="text" id="person1" />Ange ett nummer för den första personen. <br>
+<input type="text" id="fornamn1" />Föredraget namn för person (Efternamn, Förnamn).<br>
+<input type="text" id="levnad1" />Levnadstid<br>
+<input type="text" id="viaf1" />ViafId<br><br>
+
+<input type="text" id="person2" /> Ange ett nummer för den andra personen. <br>    
+<input type="text" id="fornamn2" />Föredraget namn för person (Efternamn, Förnamn).<br>
 <input type="text" id="levnad2" /> Fyll i levnadstid<br>
-<input type="text" id="viaf2" /> Fyll i viafid (se viaf.org) <br><br>
+<input type="text" id="viaf2" />ViafId<br><br>
     
-<input type="text" id="fornamn3" /> Använd formatet Efternamn, Förnamn. <br>
+<input type="text" id="person3" /> Ange ett nummer för den tredje personen. <br>
+<input type="text" id="fornamn3" />Föredraget namn för person (Efternamn, Förnamn).<br>
 <input type="text" id="levnad3" /> Fyll i levnadstid<br>
-<input type="text" id="viaf3" /> Fyll i viafid (se viaf.org) <br><br>
+<input type="text" id="viaf3" />ViafId<br><br>
 
 
 <b>Fyll i relationer</b><br><br>
 
 <input type="text" id="huvudupphov" /> Fyll i den person (px) som har huvudupphovet (exempelvis författaren av ett översatt verk) <br>
-<input type="text" id="medupphov1" /> Fyll i den person (py) som har medupphov (exempelvis författaren av ett översatt verk) <br>
-<input type="text" id="roll1" /> Fyll i den roll (py) haft (aut (författare), trl(översättare), edt(redaktör), oth(annan) <br>
+<input type="text" id="medupphov1" /> Fyll i en person (py) som har medupphov (exempelvis författaren av ett översatt verk) <br>
+<input type="text" id="medupphov2" /> Fyll i en person (pz) som har medupphov (exempelvis författaren av ett översatt verk) <br>
+<input type="text" id="roll1" /> Fyll i den roll (px) haft (aut (författare), trl(översättare), edt(redaktör), oth(annan) <br>
+<input type="text" id="roll2" /> Fyll i den roll (py) haft (aut (författare), trl(översättare), edt(redaktör), oth(annan) <br>
+<input type="text" id="roll3" /> Fyll i den roll (pz) haft (aut (författare), trl(översättare), edt(redaktör), oth(annan) <br>
 
 
 
 <br>
-<b>Attribut till manifestationen:</b><br>
+<b>Attribut till manifestationen</b><br>
 <br> m<span id="displayManifestation"></span><br>
 <div><p>IdentifikatorIsbn/020a <span id="displayIsbn"></span> ; <br> </p></div>
-<div>IdentifikatorIssn/022a <span id="displayIssn"></span> ;<br> </div>
- Huvudtitel245/a <span id="displayTitel"></span> ; <br>
-<div>OvrigTitelinformation/245b <span id="displayUndertitel"></span> ;<br> </div>
-<div>Upphovsuppgift/245c <span id="displayUpphov"></span> ; <br> </div>
-<div>upplageuppgift/250a <span id="displayUpplaga"></span> ;<br> </div>
-<div>UpplagespecifikUpphovsuppgift/250b <span id="displayUpplageupphov"></span> ;<br> </div>
-<div>Utgivningsort/260a <span id="displayUtgivningsort"></span> ;<br> </div>
-<div>Utgivarnamn/260b <span id="displayUtgivningsnamn"></span> ;<br> </div>
-<div>Utgivningstid/260c <span id="displayUtgivningstid"></span> ;<br> </div>
+<div><p>IdentifikatorIssn/022a <span id="displayIssn"></span> ;<br> </p></div>
+<div><p>Huvudtitel245/a <span id="displayTitel"></span> ; <br></div>
+<div><p>OvrigTitelinformation/245b <span id="displayUndertitel"></span> ;<br> </p></div>
+<div><p>Upphovsuppgift/245c <span id="displayUpphov"></span> ; <br> </p></div>
+<div><p>upplageuppgift/250a <span id="displayUpplaga"></span> ;<br> </p></div>
+<div><p>UpplagespecifikUpphovsuppgift/250b <span id="displayUpplageupphov"></span> ;<br> </p></div>
+<div><p>Utgivningsort/260a <span id="displayUtgivningsort"></span> ;<br> </p></div>
+<div><p>Utgivarnamn/260b <span id="displayUtgivningsnamn"></span> ;<br> </p></div>
+<div><p>Utgivningstid/260c <span id="displayUtgivningstid"></span> ;<br> </p></div>
 <div>Medietyp/337a <span id="displayMedietyp"></span> ;<br> </div>
 <div>Barartyp/338a <span id="displayBarartyp"></span> ;<br> </div>
-<div>Bararomfang/300a <span id="displayBararomfang"></span> ;<br> </div>
-<div>HuvudtitelTillSerie/490a <span id="displayHuvudtitelserie"></span> ;<br> </div>
-<b>Notera att den sista raden skall avslutas med . istället för ; </b>
-<div>Medupphov/700 [id/a <span id="displayMedupphov1"></span> ; roll/4 <span id="displayRoll1"></span>] ;<br> </div>
+<div><p>Bararomfang/300a <span id="displayBararomfang"></span> ;<br> </p></div>
+<div><p>HuvudtitelTillSerie/490a <span id="displayHuvudtitelserie"></span> .<br> </p></div>
+<p><b>Notera att den sista raden skall avslutas med . istället för ; </b></p>
+
 <br><br>
+<p><b>Attribut för relaterade verk</b><br></p>
+<div><p><span id="displaySeriemanifestation"></span><br> </p></div>
+<div><p>Huvudtitel245/a <span id="displayRelhuvudtitel1"></span> ; <br></p></div>
+<div><p><span id="displayVerkmanifestation"></span><br> </p></div>
+<div><p>Huvudtitel245/a <span id="displayRelhuvudtitel2"></span> . <br></p></div>
+<br><br>
+
+<p><b>Relationer</b><br></p>
+<div><p>Huvudupphov/100 [id/a <span id="displayHuvudupphov"></span> ; roll/4 <span id="displayRoll1"></span>] ;<br> </p></div>
+<div><p>Medupphov/700 [id/a <span id="displayMedupphov1"></span> ; roll/4 <span id="displayRoll2"></span>] ;<br> </p></div>
+<div><p>Medupphov/700 [id/a <span id="displayMedupphov2"></span> ; roll/4 <span id="displayRoll3"></span>] ;<br> </p></div>
+<div><p>Serie/830a <span id="displaySeriemanifestation2"></span> ;<br> </p></div>
+<div><p>Verktitel/240a <span id="displayVerkmanifestation2"></span> .<br> </p></div>
+
+<input type="button" id="btnShow" value="showTutorial"/>
+<div id="tut" style="display:none">
+Hur fungerar detta verktyg?<br>
+Förhoppningsvis är det tillräckligt intuitivt för att det skall gå att använda utan vidare instruktioner. Annars följer en guide nedan:<br>
+Som underlag i denna guide används boken Dagarna och Nätterna. Klickbara inscannade kopior av relevant data finns här:<br>
+<a href="/bilder/omslag.JPG"><img src="bilder/omslag.JPG" height="530" width="372" alt="omslag"></a><br>
+<a href="/bilder/blad1.JPG"><img src="bilder/blad1.JPG" height="568" width="331" alt="blad ett"></a><br>
+<a href="/bilder/blad2.JPG"><img src="bilder/blad2.JPG.JPG" height="544" width="321" alt="blad två"></a><br><br>
+</div>
 
 </div>
 <script src="katalog.js"></script>
