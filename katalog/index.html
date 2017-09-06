@@ -46,7 +46,7 @@ Klicka på en oanvänd rad eller rubrik i listan för snyggare formattering.<br>
 <input type="text" id="medietyp" /><span class="tooltip" title="Se sida 61 i kompendiet eller guiden som ligger längst ner på sidan. Oftast omedierad.">Medietyp</span><br>
 <input type="text" id="barartyp" /><span class="tooltip" title="Volym om det är en bok. Se en komplett förteckning i kompendiet på sidan 61">Bärartyp</span><br>
 <input type="text" id="bararomfang" /><span class="tooltip" title="För böcker: Antal sidor. Används mer än en slags paginering tas bägge upp, avskilda med ett kommatecken, exv. xi, 200 sidor">Bäraromfång</span><br>
-<input type="text" id="huvudtitelserie" /><span class="tooltip" title="Ingår titeln i en serie listas här titeln på serien. Behöver du lägga till ytterligare information för att förtydliga vilken serie och vilken volym i serien titeln tillhör? Se exempel 4.">Huvudtitel till serie</span><br>
+<input type="text" id="serieuppgift" /><span class="tooltip" title=" Se exempel 4. Se tipsen längst ned på sidan">Serieuppgift</span><br>
 
 <b>Fyll i attribut för relaterade verk</b><br>
 <input type="text" id="seriemanifestation" /><span class="tooltip" title=" Fylls i enligt formatet mx.x.x exv. m2.1.1 Ingår titeln i en serie fyller du här i ett egenskapat manifestationsnummer. Tänk på subjekt-predikat-objekt. En serie är inte samme subjekt och skall därför ha en annan förstasiffra.">Manifestationsnummer för serie (t.ex. m2.1.1)</span><br>
@@ -100,7 +100,7 @@ Notera att relaterade verk kan ha fler attribut. Fyll i dessa utifrån de uppgif
 <div>Medietyp/337a <span id="displayMedietyp"></span> ;<br> </div>
 <div>Barartyp/338a <span id="displayBarartyp"></span> ;<br> </div>
 <div><p>Bararomfang/300a <span id="displayBararomfang"></span> ;<br> </p></div>
-<div><p>HuvudtitelTillSerie/490a <span id="displayHuvudtitelserie"></span> .<br> </p></div>
+<div><p>Serieuppgift/490 <span id="displaySerieuppgift"></span> .<br> </p></div>
 <p><b>Notera att den sista raden skall avslutas med . istället för ; oavsett vilket attribut som står sist.</b></p>
 
 <br><br>
@@ -143,6 +143,19 @@ Notera att relaterade verk kan ha fler attribut. Fyll i dessa utifrån de uppgif
 <hr>
 <input type="button" id="btnShow" value="Visa Användarmanual"/>
 <div id="tut" style="display:none">
+<b>Snabba frågor och svar</b><br>
+<var>Går det att lägga in fler fält?</var><br>
+Nej. <br>
+<var>Jag råkade klicka på ett fält jag inte ville ta bort? </var><br>
+Ladda om sidan eller för manuellt in informationen. <br>
+<var>Varför står det medupphov på vissa ställen?</var><br>
+De namn som matas in i ett fält som avser ett medupphov visas sedan i sammanställningen under medupphov, tyvärr hittade jag inget enkelt sätt att göra det dynamiskt.<br>
+<var>Jag letade upp ett ISSN-nummer för en seriell resurs online?</var><br>
+Lägg in uppgiften inom [],<br>
+<var>Behöver jag skriva in en stat inom []?</var><br>
+För svenska orter behövs det oftast inte. Se dock t.ex. Athens, GR jämfört med Athens, GA.. Finns möjlighet för missförstånd rekommenderar jag att stat/land tas med.<br>
+<em>Serieuppgift?</em><br>
+Serieuppgiften är relativt komplex. (se s. 64-65 i kompendiet) Här matas information in som rör serien (exv. en tidskriftssamling eller bokserie). Vanliga attribut som används är HuvudtitelTillSerie/a NumreringInomSerie/v och Issn/022a. En sträng kan se ut på följande sätt [HuvudtitelTillSerie/a Titelpåserie ; NumreringInomSerie/v 123] <br>
 Hur fungerar detta verktyg?<br>
 Förhoppningsvis är det tillräckligt intuitivt för att det skall gå att använda utan vidare instruktioner. Annars följer en guide nedan:<br>
 Som underlag i denna guide används boken Dagarna och Nätterna. Klickbara inscannade kopior av relevant data finns här:<br>

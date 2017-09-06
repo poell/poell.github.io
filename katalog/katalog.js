@@ -1,6 +1,9 @@
 $('#manifestation').keyup(function () {
   $('#displayManifestation').text($(this).val());
 });
+$('#manifestation').keyup(function () {
+  $('#displayManifestation2').text($(this).val());
+});
 $('#isbn').keyup(function () {
   $('#displayIsbn').text($(this).val());
 });
@@ -13,7 +16,6 @@ $('#titel').keyup(function () {
 $('#undertitel').keyup(function () {
   $('#displayUndertitel').text($(this).val());
 });
-
 $('#upphov').keyup(function () {
   $('#displayUpphov').text($(this).val());
 });
@@ -44,8 +46,8 @@ $('#barartyp').keyup(function () {
 $('#bararomfang').keyup(function () {
   $('#displayBararomfang').text($(this).val());
 });
-$('#huvudtitelserie').keyup(function () {
-  $('#displayHuvudtitelserie').text($(this).val());
+$('#serieuppgift').keyup(function () {
+  $('#displaySerieuppgift').text($(this).val());
 });
 $('#seriemanifestation').keyup(function () {
   $('#displaySeriemanifestation').text($(this).val());
