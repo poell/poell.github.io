@@ -154,9 +154,11 @@ Notera att relaterade verk kan ha fler attribut. Fyll i dessa utifrån de uppgif
 <div id="tut" style="display:none">
 <b>Snabba frågor och svar</b><br>
 <var>Går det att lägga in fler fält?</var><br>
-Nej. <br><br>
+Ja, men då blir sidan väldigt oöverskådlig. <br><br>
 <var>Jag råkade klicka på ett fält jag inte ville ta bort? </var><br>
 Ladda om sidan eller för manuellt in informationen. <br><br>
+<var>Behöver jag inte skriva in ; i slutet?</var><br>
+Semikolon läggs automatiskt till när du matar in din data. Därför visas ; i listan över attribut redan innan användaren matat in den data som skall stå framför ;. Kom ihåg när det skall vara punkt istället för ;!<br><br>
 <var>Varför står det medupphov på vissa ställen?</var><br>
 De namn som matas in i ett fält som avser ett medupphov visas förenklat sedan i sammanställningen under medupphov.<br><br>
 <var>Jag letade upp ett ISSN-nummer för en seriell resurs online?</var><br>
@@ -166,9 +168,41 @@ För svenska orter behövs det oftast inte. Se dock t.ex. Athens, GR jämfört m
 <em>Serieuppgift?</em><br>
 Serieuppgiften är relativt komplex. (se s. 64-65 i kompendiet) Här matas information in som rör serien (exv. en tidskriftssamling eller bokserie). Vanliga attribut som används är HuvudtitelTillSerie/a NumreringInomSerie/v och Issn/022a. En sträng kan se ut på följande sätt [HuvudtitelTillSerie/a Titelpåserie ; NumreringInomSerie/v 123] <br><br>
 <var>Stora eller små bokstäver?</var><br>
-Enligt KBs praxis skall vi följa "svenska skrivregler". Exempel finns på deras hemsida. Med andra ord, skriv av felstavningar men se upp för versaler?<br><br>
+Enligt KBs praxis skall vi följa "svenska skrivregler". Exempel finns på deras hemsida. Med andra ord, skriv av felstavningar men se upp för versaler. För ytterligare information, se <a href="http://www.kb.se/rdakatalogisering/Anvisningar/Allmanna-anvisningar/Atergivning-av-element/">KBs webbplats</a> <br><br>
+<var>Vad betyder s. ?</var><br>
+Sidhänvisningarna rör kompendiet för resursbeskrivning som finns på pingpong. <br>
 <hr>
-Hur fungerar detta verktyg?<br>
+En förklaring av de olika attributen i Turtle.<br><br>
+<br>
+<b>Attribut till manifestationen</b>
+<var>Manifestationsnummer (mx.x.x)</var><br>
+Detta fält lämnas tomt när du först besöker denna webbplats. Genom att fylla i rutan "Manifestationsnummer" visas detta nummer sedan i sammanställningen av attribut till manifestationen.<br><br>
+<var>IdentifikatorISBN020a</var><br>
+ISBN-numret, en unik sifferkombination som är kopplad till en viss utgåva av en trycksak, fylls i en sammanhängande sträng utan mellanslag eller bindestreck.<br><br>
+<var>Identifikator/022a</var><br>
+Används om manifestationen endast är att betrakta som en serie. Är manifestationen en egen manifestation och en seriedel kan både ISBN och ISSN användas. ISSN läggs till skillnad från ISBN in med bindestreck.<br><br>
+<var>Huvudtitel/245a</var><br>
+Titeln utan eventuella undertitlar eller övrig information så som namn på översättare eller författare av förord. Återge titeln exakt som den står i manifestationen, även om det förekommer fel. Lägg istället till en korrekt variant av titeln som anmärkning. (s.53-54)<br><br>
+<var>OvrigTitelinformation/245b</var><br>
+Det är obligatoriskt att återge exv. undertiteln enligt Librispraxis. Alla titelelement som står på exv. titelbladet skall stå med. Notera att "svenska skrivregler" gäller. (s53-54)<br><br>
+<var>Upphovsuppgift/245c</var><br>
+Fyll i den information du finner i manifestationen. Eventuella felstavningar tas med. inklusive t.ex. "översättning av" samt "förord av". Dessa attribut separeras mha. ;. Titel ; översättning ... ; förord av. 
+Återge informationen så som den är skriven. (s.55)<br><br>
+<var>upplageuppgift/250a</var><br>
+Återge denna information så som den står, om den finns i manifestationen. Är det viktigt för användaren och du vet att en ny upplaga med viktiga förändringar finns, klamra då manuellt upplageuppgift. (s.56) <br><br>
+<var>UpplagespecifikUpphovsuppgift/250b</var><br>
+Fyll i "om det kan anses viktigt" (s.56)<br><br>
+<var>Utgivningsort/260a</var><br>
+Den ort där utgivaren (oftast förlaget) finns. Återges som det står i manifestationen. Finns flera utgivare används den första utgivarens ort. (s.57). Lägg till namn, land, delstat eller provins när det behövs. Sätt det inom klammer. Använd svensk namnform om sådan existerar, annars den inhemska. (s.58)<br><br>
+<var>Utgivarnamn/260b</var><br>
+Skriv av manifestationen. Ange i regel den första utgivarens (exv. förlagets) namn. Undantag ges på s.58.<br><br>
+<var>Utgivningstid/260c</var>
+Använd helst samma källa som du använde för huvudtiteln. Står inte tiden enligt den gregorianska eller julianska kalendern läggs den till inom klammer (enligt RDA). Librispraxis säger dock att tillverkningstiden skall vara utgivningstid. Annars distributionstid -> Copyrightår. Klamra. Ange annars ungefärlig utgivningstid (s.59) <br><br>
+<var>Medietyp/337a</var><br>
+Textxxxxxx<br><br>
+
+<hr>
+Hur fungerar verktyget?<br>
 Förhoppningsvis är det tillräckligt intuitivt för att det skall gå att använda utan vidare instruktioner. Annars följer en guide nedan:<br>
 Som underlag i denna guide används boken Dagarna och Nätterna. Klickbara inscannade kopior av relevant data finns nedan:<br><br>
 <a href="http://i.imgur.com/CLkx3Zg.jpg"><img src="bilder/blad1.JPG" height="568" width="331" alt="blad ett"></a><br>
