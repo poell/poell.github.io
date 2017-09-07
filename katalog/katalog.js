@@ -121,9 +121,8 @@ $('#roll2').keyup(function () {
 $('#roll3').keyup(function () {
   $('#displayRoll3').text($(this).val());
 });
-$("#btnShow").on("click",function(){
-
-    $("#tut").css("display","block")
+$("#btnShow").click(function(){
+    $("#tut").toggle();
 });
 $( function() {
     $( document ).tooltip();
