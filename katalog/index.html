@@ -100,7 +100,7 @@ Notera att relaterade verk kan ha fler attribut. Fyll i dessa utifrån de uppgif
 <div>Huvudtitel245/a <span id="displayTitel"></span> ; <br></div>
 <div><p>OvrigTitelinformation/245b <span id="displayUndertitel"></span> ;<br> </p></div>
 <div><p>Upphovsuppgift/245c <span id="displayUpphov"></span> ; <br> </p></div>
-<div><p>upplageuppgift/250a <span id="displayUpplaga"></span> ;<br> </p></div>
+<div><p>Upplageuppgift/250a <span id="displayUpplaga"></span> ;<br> </p></div>
 <div><p>UpplagespecifikUpphovsuppgift/250b <span id="displayUpplageupphov"></span> ;<br> </p></div>
 <div><p>Utgivningsort/260a <span id="displayUtgivningsort"></span> ;<br> </p></div>
 <div><p>Utgivarnamn/260b <span id="displayUtgivningsnamn"></span> ;<br> </p></div>
@@ -122,15 +122,15 @@ Notera att relaterade verk kan ha fler attribut. Fyll i dessa utifrån de uppgif
 <b>Attribut för relaterade personer</b><br>
 <div><p><span id="displayPerson1"></span><br> </p></div>
 <div><p>ForedragetNamnForPerson/100a <span id="displayFornamn1"></span> ; <br></p></div>
-<div><p>levnadstid/100d <span id="displayLevnad1"></span> ; <br></p></div>
+<div><p>Levnadstid/100d <span id="displayLevnad1"></span> ; <br></p></div>
 <div><p>ViafId <span id="displayViaf1"></span> . <br></p></div>
 <div><p><span id="displayPerson2"></span><br> </p></div>
 <div><p>ForedragetNamnForPerson/100a <span id="displayFornamn2"></span> ; <br></p></div>
-<div><p>levnadstid/100d <span id="displayLevnad2"></span> ; <br></p></div>
+<div><p>Levnadstid/100d <span id="displayLevnad2"></span> ; <br></p></div>
 <div><p>ViafId <span id="displayViaf2"></span> . <br></p></div>
 <div><p><span id="displayPerson3"></span><br> </p></div>
 <div><p>ForedragetNamnForPerson/100a <span id="displayFornamn3"></span> ; <br></p></div>
-<div><p>levnadstid/100d <span id="displayLevnad3"></span> ; <br></p></div>
+<div><p>Levnadstid/100d <span id="displayLevnad3"></span> ; <br></p></div>
 <div><p>ViafId <span id="displayViaf3"></span> . <br></p></div>
 
 
@@ -176,9 +176,9 @@ En förklaring av de olika attributen i Turtle.<br>
 <br>
 <b>Attribut till manifestationen</b><br>
 <var>Manifestationsnummer (mx.x.x)</var><br>
-Detta fält lämnas tomt när du först besöker denna webbplats. Genom att fylla i rutan "Manifestationsnummer" visas detta nummer sedan i sammanställningen av attribut till manifestationen.<br><br>
+Detta fält lämnas tomt när du först besöker denna webbplats. Genom att fylla i rutan "Manifestationsnummer" visas detta nummer sedan i sammanställningen av attribut till manifestationen. Det inleds med m, exempelvis m1.1.1<br><br>
 <var>IdentifikatorISBN020a</var><br>
-ISBN-numret, en unik sifferkombination som är kopplad till en viss utgåva av en trycksak, fylls i en sammanhängande sträng utan mellanslag eller bindestreck.<br><br>
+ISBN-numret, en unik sifferkombination som är kopplad till en viss utgåva av en trycksak, fylls i en sammanhängande sträng utan mellanslag eller bindestreck. Står flera ISBN-nummer med kan de anges "vid behov".<br><br>
 <var>Identifikator/022a</var><br>
 Används om manifestationen endast är att betrakta som en serie. Är manifestationen en egen manifestation och en seriedel kan både ISBN och ISSN användas. ISSN läggs till skillnad från ISBN in med bindestreck.<br><br>
 <var>Huvudtitel/245a</var><br>
@@ -188,19 +188,63 @@ Det är obligatoriskt att återge exv. undertiteln enligt Librispraxis. Alla tit
 <var>Upphovsuppgift/245c</var><br>
 Fyll i den information du finner i manifestationen. Eventuella felstavningar tas med. inklusive t.ex. "översättning av" samt "förord av". Dessa attribut separeras mha. ;. Titel ; översättning ... ; förord av. 
 Återge informationen så som den är skriven. (s.55)<br><br>
-<var>upplageuppgift/250a</var><br>
+<var>Upplageuppgift/250a</var><br>
 Återge denna information så som den står, om den finns i manifestationen. Är det viktigt för användaren och du vet att en ny upplaga med viktiga förändringar finns, klamra då manuellt upplageuppgift. (s.56) <br><br>
 <var>UpplagespecifikUpphovsuppgift/250b</var><br>
 Fyll i "om det kan anses viktigt" (s.56)<br><br>
 <var>Utgivningsort/260a</var><br>
-Den ort där utgivaren (oftast förlaget) finns. Återges som det står i manifestationen. Finns flera utgivare används den första utgivarens ort. (s.57). Lägg till namn, land, delstat eller provins när det behövs. Sätt det inom klammer. Använd svensk namnform om sådan existerar, annars den inhemska. (s.58)<br><br>
+Den ort där utgivaren (oftast förlaget) finns. Återges som det står i manifestationen. Finns flera utgivare används den första utgivarens ort. (s.57). Lägg till namn, land, delstat eller provins när det behövs. Sätt det inom klammer. Använd svensk namnform om sådan existerar, annars den inhemska. Under utgivare tas det första förlaget med. Är det inte svenskt och det finns ett svenskt i manifestationen läggs även det svenska till. (s.58)<br><br>
 <var>Utgivarnamn/260b</var><br>
 Skriv av manifestationen. Ange i regel den första utgivarens (exv. förlagets) namn. Undantag ges på s.58.<br><br>
 <var>Utgivningstid/260c</var>
 Använd helst samma källa som du använde för huvudtiteln. Står inte tiden enligt den gregorianska eller julianska kalendern läggs den till inom klammer (enligt RDA). Librispraxis säger dock att tillverkningstiden skall vara utgivningstid. Annars distributionstid -> Copyrightår. Klamra. Ange annars ungefärlig utgivningstid (s.59) <br><br>
 <var>Medietyp/337a</var><br>
-Textxxxxxx<br><br>
+Vi använder för trycksaker omedierad. Det innebär att inget hjälpmedel behövs för att manifestationen skall kunna användas. De medietyper som finns är: audio, dator, projicerad, mikroform, mikroskopisk, stereografisk, omedierad, video, annan eller ospecifierad<br><br>
+<var>Barartyp/338a</var><br>
+Vi använder verk för tryckta böcker. En komplett lista över bärartyper finns på s. 61.<br><br>
+<var>Bararomfang</var><br>
+För böcker använder vi antal sidor. Står sidantalet paginerat på olika sätt (exempelvis med romerska och arabiska siffror) tas både uppgifterna med i formatet: xx, 100 sidor. Vi skriver ut "sidor" istället för att förkorta till s. <br><br>
+<var>Serieuppgift/490</var><br>
+Se s. 64-65 för en komplett förteckning över attribut som kan användas. Här för vi in element som behövs för att identifiera serien och ev. manifestationens plats i serien. Vi använder t.ex. HuvudtitelTillSerie/a NumreringInomSerie/v och Issn/022a. Används exempelvis HuvudtitelTillSerie/a skrivs det ut i följande format: <br>
+HuvudtitelTillSerie/490a Titelnpåserien ; (eller . om det står sist). a:et ovan är alltså det tecken som läggs till det nummer som betecknar "Serieuppgift". Likaså skulle vi använda NumreringInomSerie/v på samma sätt.<br>
+NumreringInomSerie490v 123 ; (eller oftast .) tecknet efter / läggs alltså till efter siffran (490).<br>
+Viktigt: Se exempel 4. Här skrivs information in inom klammer eftersom användaren anser det vara extra viktigt att denna information finns med för att rätt serie skall kunna identifieras, trots att den egentligen inte finns med på listan på s.65.  <br><br>
+<b>Attribut för relaterade verk</b><br>
+<var>Manifestationsnummer för serie (my.x.x)</var><br>
+Raden är blank ovan. Fylls i då användaren matar in ett värde i formuläret. Börjar med ett litet m (exv. 2.1.1). Eftersom serien inte har någon relation till det underliggande verk på samma sätt som t.ex. en översättning har byts den första siffran i manifestationsnumret ut. Tänk alltså på att göra det på det manifestationsnummer som står över Huvudtitel245/a (för en serie.)<br><br>
+<var>Huvudtitel245/a</var><br>
+Så vi skapar ett relaterat verk behöver vi namnge det verk vi skapat ett manifestationsnummer för. Här används huvudtiteln. Även andra attribut så som ISSN och de andra attribut som listades på s.65 kan matas in under relaterade verk. Se exv. exempel 4 igen.<br><br>
+<var>Manifestationsnummer för ett annat verk (mx.y.x)</var><br>
+Raden är blank ovan. Fylls i då användaren matar in ett värde i formuläret. Börjar med ett litet m (exv. m1.2.1). Används ofta för originalverket då den manifestation vi katalogiserar är en översättning. Här är det istället siffra två som förändras eftersom det är samma ursprungsverk som ligger till grund för översättningen om än vår manifestation är på ett annat språk. <br><br>
+<var>Huvudtitel245/a</var><br>
+För ett översatt verk står vanligtvis originaltiteln på originalspråk på exv. titelbladet. Det är denna titel, på utrikiska, som förs in här.<br><br>
+<b>Attribut för relaterade personer</b><br>
+<var>"personsiffra"</var><br>
+Raden är tom ovan tills användaren fyllt i ett värde. Inleds med ett p. (exv p1). Du väljer själv vilken siffra du vill använda. Tänk dock på att samma siffra används under nästa rubrik då du definierar personens roll! <br><br>
+<var>ForedragetNamnForPerson/100a</var><br>
+Detta fält samt de två nedanför detta fylls med fördel i efter en sökning på <a href="https://viaf.org">VIAF</a>. Välj under "Select Field" valet Personal Names samt under "Select Index" All Viaf. Förhoppningsvis finner du författaren. Kopiera i så fall in det namn du finner. Ofta ser du en svensk flagga efter namnet. Det innebär att namnet är inlagt som en auktoritetsdatabaspost hos KB. Formatet är Efternamn, Förnamn eller rättare sagt Släktnamn, Förnamn. <br>Det innebär att vissa poster, där namngivningstraditionen är annorlunda än den vi har i Sverige ser likadan ut som den redan gör här. (t.ex. Mao, Zedong istället för Zedong, Mao) (s.67). Kan du inte lista ut vilket namn du skall använda rekommenderas det att namnet med flest verk på viaf används. Hittar du inget namn alls som stämmer överrens med personen fyller du själv i det enligt formatet Släktnamn, Förnamn (s.68)<br><br>
+<var>Levnadstid/100d</var>z<br>
+För in den levnadstid du fann på VIAF.org. Fylls i enligt formatet Födelseår - Dödsår. Är inte individen framliden skrivs endast Födelseår - (i samma format som det står på VIAF)
+<var>ViafId</var>z<br>
+För här in det ViafId du fann när du letade upp namnet på författaren på VIAF webbplats. Detta är ett unikt nummer som är kopplat till denna specifika författare.<br><br>
 
+<b>Relationer</b><br>
+<var>Manifestationsnummer</var><br>
+Denna rad är tom ovan. Den fylls i då användaren matar in ett värde. Du använder här samma värde du använde högt upp, under manifestationsnummer då attributen för manifestationen fylldes i.<br><br>
+<var>Huvudupphov/100</var><br>
+Endast en person kan ha huvudupphovet. Finns en person med huvudupphov fylls dennes "personsiffra" i här enligt följande format:<br>
+Huvudupphov/100 [id/a personsiffra ; roll/4 roll] ;<br>
+De möjliga rollerna är aut (författare), trl (översättare), edt (redaktör) eller oth (annan). Har vi person p1 som författare (aut) med huvudupphov är alltså den korrekta fullständiga strängen:<br>
+Huvudupphov/100 [id/a p1 ; roll/4 aut] ;<br><br>
+<var>Medupphov/700</var><br>
+Flera personer kan ha medupphov. Finns en person med meduuphov fylls dennes "personsiffra" i här enligt följande format:<br>
+Medupphov/700 [id/a personsiffra ; roll/4 roll] ;<br>
+De möjliga rollerna är aut (författare), trl (översättare), edt (redaktör) eller oth (annan). Har vi person p2 som översättare (trl) med medupphov är alltså den korrekta fullständiga strängen:<br>
+Huvudupphov/100 [id/a p2 ; roll/4 trl] ;<br><br>
+<var>Serie/830a</var><br>
+Här fylls manifestationsnumret (exv m2.1.1) i för det verk som under "Attribut för relaterade verk" definierades som en seriell resurs. Ovan är det tomt. Har en seriell resurs fyllts i i formuläret visas det här.<br><br>
+<var>Verktitel/240a</var><br>
+Här fylls manifestationsnumret (exv 1.2.1) i för det verk som under "Attribut för relaterade verk" definierades som ett annat slags verk. Raden är tom ovan men fylls i om ett sådant verk förekommer.
 <hr>
 Hur fungerar verktyget?<br>
 Förhoppningsvis är det tillräckligt intuitivt för att det skall gå att använda utan vidare instruktioner. Annars följer en guide nedan:<br>
@@ -218,7 +262,7 @@ Vi hittar ett ISBN-nummer (91 7742 244 9). Det matas in utan bindestreck och bla
 Här finns också en originaltitel. "Les jours et les Nuits". Denna titel används under "Attribut för relaterade verk/manifestationer" under "Huvudtitel för annat verk" eftersom de rör en annan manifestation än den vi håller i handen. Vidare definierar ett nytt manifestationsnummer för denna nya manifestation. Vi ger det numret 1.2.1 Eftersom vår manifestation är en översättning av originalverket bör vi fortfarande inleda manifestationsnumret med 1.<br><br>
 Förord förs inte in om det inte uppgår till 25% av bokens totala längd. Samma sak torde gälla efterord. Tryckort/Land har inte heller förts in i några av övningsexempeln. Den sista paginerade sidan är 158. Vi för därför in "158 sidor" i fältet "Bäraromfång".<br>
 Vidare behöver vi bestämma vilken slags medietyp och vilken bärartyp vi skall fylla i. (Utförligare information finns på sidan 61 i kompendiet.)<br>
-Medietypen sätts till: audio, dator, projicerad, mikroform, mikroskopisk, stereografisk, omedierad, video, annan eller ospecifierad. Den absolut vanligaste formen är "omedierad" som används för trycksaker. Vi för därför in "omedierad" som medietyp. Bärartypen är för inbundna böcker volym. "volym" förs därför in under bärartyp. <br><br>
+Medietypen sätts till omedierad. Den absolut vanligaste formen är "omedierad" som används för trycksaker. Vi för därför in "omedierad" som medietyp. Bärartypen är för inbundna böcker volym. "volym" förs därför in under bärartyp. <br><br>
 Nu skall vi föra in de personer som nämnts i manifestationen.>br>
 Författaren av originalverket är Alfred Jarry. Namn matas in i följande format: Efternamn, Förnamn. "Jarry, Alfred" förs därför in som föredraget namn under "Fyll i attribut för person". Vi ger Jarry ett nummer. Detta skrivs i följande format: px. Exempelvis p3. Vi matar in p3 i fältet "Ange ett nummer för den första personen".<br><br>
     Vi vet inte när Alfred Jarry levde. Vi behöver dock fylla i hans levnadstid. Detta fylls i i formatet: Födelseår- (Dödsår) (då det är känt, eller personen är framliden). Inte heller vet vi vilket ViafId vi skall mata in. Denna information är dock enkel att hitta på <a href="htts://viaf.org">VIAF</a>, som är en auktoritetsdatadatabas. Matar vi in Jarry ser vi att han levde mellan 1873-1907. Klickar vi på namnet hamnar vi <a href="https://viaf.org/viaf/66469054/#Jarry,_Alfred,_1873-1907.">här</a>. På webbplatsen går det att utläsa att Jarrys VIAF ID är 66469054. Vi matar därför in "1873-1907" i fältet "levnadstid" samt 66469054 i fältet ViafId. Samma process upprepas sedan för översättarna.<br><br>
