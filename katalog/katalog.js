@@ -124,6 +124,9 @@ $('#roll3').keyup(function () {
 $("#btnShow").click(function(){
     $("#tut").toggle();
 });
+$("#btnAttribut").click(function(){
+    $("#attribut").toggle();
+});
 $( function() {
     $( document ).tooltip();
   });
